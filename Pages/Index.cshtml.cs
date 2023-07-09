@@ -48,11 +48,6 @@ namespace RenderingRSS.Pages
             return Page();
         }
 
-        private async Task<HttpResponseMessage> FetchXmlContentAsync(HttpClient httpClient, string url)
-        {
-            return await httpClient.GetAsync(url);
-        }
-
         private List<string> ParseOpmlContent(string opmlContent)
         {
             var feedUrls = new List<string>();
